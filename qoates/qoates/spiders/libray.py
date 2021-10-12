@@ -15,7 +15,7 @@ class LibraySpider(scrapy.Spider):
 
     def parse(self, response):
         if response.status == 500:
-            return CloseSpider
+            return CloseSpider("reached last page .....")
         resp = json.loads(response.body)
         works = resp.get('works')
         for count in works:
