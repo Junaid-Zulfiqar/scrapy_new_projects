@@ -26,6 +26,7 @@ class ProductReviewsSpider(scrapy.Spider):
             # yield {"product_url":product_url,
             #         "rating":rating}
 
+
     def parse_details(self,response):
         rating = response.request.meta['rating']
         title = response.xpath("//span[@id='productTitle']/text()").get()
@@ -38,4 +39,12 @@ class ProductReviewsSpider(scrapy.Spider):
             "product_title":title,
             "product_price":price,
             "global_rating":global_rating
-        }           
+        }    
+
+        # next_page = response.xpath("//li[@class='a-last']/a/@href").get()
+        # url_join = response.urljoin(next_page)
+
+        # if url_join:
+        #     yield scrapy.Request(url=next_page, callback=self.parse, headers={
+        #         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36'
+        #     })
