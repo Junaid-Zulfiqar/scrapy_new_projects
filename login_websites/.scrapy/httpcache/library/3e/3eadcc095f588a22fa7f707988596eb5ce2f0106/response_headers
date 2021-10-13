@@ -1,0 +1,8 @@
+Server: nginx/1.18.0 (Ubuntu)
+Date: Wed, 13 Oct 2021 12:34:17 GMT
+Content-Type: text/html
+Set-Cookie: pd=; Path=/
+Set-Cookie: session=/people/nayabvector%2C2021-10-13T12%3A34%3A17%2C97183%241221721f5305a6721bf107aedf5f9bbd; Path=/
+Location: https://openlibrary.org/
+X-Ol-Stats: "IB 4 0.068 MC 5 0.002 TT 0 0.786"
+Referrer-Policy: no-referrer-when-downgrade
